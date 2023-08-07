@@ -1,51 +1,86 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>My Simple Homepage</title>
-</head>
-<body>
-
-	<h1>Supplementary homepage for</h1> 
-    <h1>Soyong Shin's poster presentation</h1>
-
-    <br><br>
-	<p>Click the buttons below to view figures and videos:</p>
-    <br><br>
-
-    <p>======================================================================</p>
-    <p>Supplementary figures for the poster</p>
-    <p>======================================================================</p>
-    <p>Figure 1. Pipeline of the models <button onclick="window.open('files/pipeline.jpg')">click</button> </p>
-    <p>Figure 2. Network architecture <button onclick="window.open('files/network.jpg')">click</button> </p>
-    <p>Figure 3. Quantitative performance of models <button onclick="window.open('files/performance.jpg')">click</button> </p>
-    <p>Figure 4. Sensitivity analysis <button onclick="window.open('files/sensitivity.jpg')">click</button> </p>
-    <p>Figure 5. R2 Analysis <button onclick="window.open('files/rsquared.jpg')">click</button> </p> 
-
-    <br><br>
-
-    <p>======================================================================</p>
-    <p>Supplementary videos for the poster</p>
-    <p>======================================================================</p>
-	<p>Video 1. Qualitative performance of models <button onclick="window.open('files/performance.mp4')">click</button> </p>
-	<p>Video 2. Pipeline in clinical environment <button onclick="window.open('files/performance_clinic.mp4')">click</button> </p>
-	<p>Video 3. Future work: Incorporating biomechanics <button onclick="window.open('files/biomechanics.mp4')">click</button> </p>
-    	<p>Video 4. Future work: Monocular video <button onclick="window.open('files/monocular_outdoor.mp4')">click</button> </p>
-	<p>Video 5. Future work: Clinical application of monocular video <button onclick="window.open('files/monocular_clinic.mp4')">click</button> </p>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main Page</title>
+    <title>ASB 2023: Soyong Shin's Posters Session</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        li {
+            text-align: center;
+            margin: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.2s, color 0.2s;
+            display: block;
+            width: 200px;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h1>Main Page</h1>
+    <header>
+        <h1>ASB 2023: <br> Soyong Shin's Posters Session</h1>
+    </header>
+
     <p>Welcome to the main page. Please choose a poster to view:</p>
     <ul>
-        <li><a href="poster1.html">Poster 1</a></li>
-        <li><a href="poster2.html">Poster 2</a></li>
+        <li>
+            <a href="poster1.html">
+                <h2>Poster 1</h2>
+                <p> <br><br> 3-D HUMAN MOTION TRACKING WITH A SINGLE CAMERA <br><br><br> </p>
+            </a>
+        </li>
+        <li>
+            <a href="poster2.html">
+                <h2>Poster 2</h2>
+                <p>PHYSICAL THERAPY ASSESSMENT WITH UNCALIBRATED CAMERAS AND INERTIAL SENSORS</p>
+            </a>
+        </li>
     </ul>
 </body>
 </html>
