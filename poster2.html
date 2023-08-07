@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poster 2</title>
+</head>
+<body>
+    <h1>Poster 2</h1>
+    <p>Some content related to Poster 2.</p>
+    
+    <button onclick="showVideo2()">Show Video 2</button>
+    <button onclick="showFigure2()">Show Figure 2</button>
+
+    <div id="videoContainer2" style="display: none;">
+        <!-- Embed Video 2 here -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div id="figureContainer2" style="display: none;">
+        <!-- Add Figure 2 here -->
+        <img src="figure2.png" alt="Figure 2">
+    </div>
+
+    <script>
+        function showVideo2() {
+            document.getElementById("videoContainer2").style.display = "block";
+            document.getElementById("figureContainer2").style.display = "none";
+        }
+
+        function showFigure2() {
+            document.getElementById("videoContainer2").style.display = "none";
+            document.getElementById("figureContainer2").style.display = "block";
+        }
+    </script>
+</body>
+</html>
