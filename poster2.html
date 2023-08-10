@@ -1,35 +1,200 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Poster 2</title>
-</head>
-<body>
-    <h1>Poster 2</h1>
-    <p>Some content related to Poster 2.</p>
-    
-    <button onclick="showVideo2()">Show Video 2</button>
-    <button onclick="showFigure2()">Show Figure 2</button>
-
-    <div id="videoContainer2" style="display: none;">
-        <!-- Embed Video 2 here -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div id="figureContainer2" style="display: none;">
-        <!-- Add Figure 2 here -->
-        <img src="figure2.png" alt="Figure 2">
-    </div>
-
-    <script>
-        function showVideo2() {
-            document.getElementById("videoContainer2").style.display = "block";
-            document.getElementById("figureContainer2").style.display = "none";
+    <title>Poster 2: PHYSICAL THERAPY ASSESSMENT WITH UNCALIBRATED CAMERAS AND INERTIAL SENSORS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
         }
 
-        function showFigure2() {
-            document.getElementById("videoContainer2").style.display = "none";
-            document.getElementById("figureContainer2").style.display = "block";
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .poster-container {
+            width: 50%;
+            text-align: center;
+        }
+
+        .poster {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .buttons-container {
+            width: 45%;
+        }
+
+        .button {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            margin: 10px;
+            transition: background-color 0.2s, color 0.2s;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .video-container,
+        .figure-container {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .video-container video {
+            max-width: 100%;
+        }
+
+        .figure-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .active-container {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleContent(content) {
+            const videoContainer1 = document.getElementById("videoContainer1");
+            const videoContainer2 = document.getElementById("videoContainer2");
+            const videoContainer3 = document.getElementById("videoContainer3");
+            const figureContainer1 = document.getElementById("figureContainer1");
+            const figureContainer2 = document.getElementById("figureContainer2");
+            const videoButton1 = document.getElementById("videoButton1");
+            const videoButton2 = document.getElementById("videoButton2");
+            const videoButton3 = document.getElementById("videoButton3");
+            const figureButton1 = document.getElementById("figureButton1");
+            const figureButton2 = document.getElementById("figureButton2");
+
+            // Function to hide all active containers and remove active-button class from buttons
+            function hideAll() {
+                videoContainer1.classList.remove("active-container");
+                videoContainer2.classList.remove("active-container");
+                videoContainer3.classList.remove("active-container");
+                figureContainer1.classList.remove("active-container");
+                figureContainer2.classList.remove("active-container");
+                videoButton1.classList.remove("active-button");
+                videoButton2.classList.remove("active-button");
+                videoButton3.classList.remove("active-button");
+                figureButton1.classList.remove("active-button");
+                figureButton2.classList.remove("active-button");
+            }
+
+            switch (content) {
+                case "video1":
+                    hideAll();
+                    videoContainer1.classList.add("active-container");
+                    videoButton1.classList.add("active-button");
+                    break;
+                case "video2":
+                    hideAll();
+                    videoContainer2.classList.add("active-container");
+                    videoButton2.classList.add("active-button");
+                    break;
+                case "video3":
+                    hideAll();
+                    videoContainer3.classList.add("active-container");
+                    videoButton3.classList.add("active-button");
+                    break;
+                case "figure1":
+                    hideAll();
+                    figureContainer1.classList.add("active-container");
+                    figureButton1.classList.add("active-button");
+                    break;
+                case "figure2":
+                    hideAll();
+                    figureContainer2.classList.add("active-container");
+                    figureButton2.classList.add("active-button");
+                    break;
+            }
         }
     </script>
+</head>
+<body>
+    <header>
+        <h1>Poster 2: <br> Physical Therapy Assessment with Uncalibrated Cameras and Inertial Sensors</h1>
+    </header>
+
+    <p>Please see the figures and videos for the extra illustrations.</p>
+
+    <div class="content-container">
+        <div class="poster-container">
+            <!-- Add Poster Image here -->
+            <img class="poster" src="files/poster2/poster.jpg" alt="Poster 1">
+        </div>
+
+        <div class="buttons-container">
+            <a class="button" href="#" id="videoButton1" onclick="toggleContent('video1')">Video 1. Statistical Mesh Fitting (Front)</a>
+            <div class="video-container" id="videoContainer1">
+                <!-- Add Video 1 here -->
+                <video controls>
+                    <source src="files/poster2/optimization.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a class="button" href="#" id="videoButton2" onclick="toggleContent('video2')">Video 2. Autocalibration (Camera)</a>
+            <div class="video-container" id="videoContainer2">
+                <!-- Add Video 2 here -->
+                <video controls>
+                    <source src="files/poster2/camera_calibration.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a class="button" href="#" id="videoButton3" onclick="toggleContent('video3')">Video 3. Qualitative Result</a>
+            <div class="video-container" id="videoContainer3">
+                <!-- Add Video 3 here -->
+                <video controls>
+                    <source src="files/poster2/qualitative.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a class="button" href="#" id="figureButton1" onclick="toggleContent('figure1')">Figure 1. Quantitative Results (Table) </a>
+            <div class="figure-container" id="figureContainer1">
+                <!-- Add Figure 1 here -->
+                <img src="files/poster2/quantitative.png" alt="Figure 1">
+            </div>
+            <a class="button" href="#" id="figureButton2" onclick="toggleContent('figure2')">Figure 2. Quantitative Results (Confusion Matrix)</a>
+            <div class="figure-container" id="figureContainer2">
+                <!-- Add Figure 2 here -->
+                <img src="files/poster2/confusion_matrices.png" alt="Figure 2">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
